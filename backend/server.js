@@ -16,15 +16,26 @@ app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
 
-//app.get('/', (req, res) => {
-//  res.send('Server is ready');
-//});
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Serve at http://localhost:${port}`);
+app.get('/', (req, res) => {
+  res.send('Server is ready');
 });
 
-app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
-);
+// Configuración para Heroku
+//app.use(express.static(path.join(__dirname, '/frontend/build')));
+//app.get('*', (req, res) =>
+//  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
+//);
+
+// Configuración por Bassir
+//const port = process.env.PORT || 5000;
+//app.listen(port, () => {
+//  console.log(`Serve at http://localhost:${port}`);
+//});
+
+// Configuración por Fazt
+//Settings
+app.set('port', process.env.PORT || 5000);
+//Starting Server
+app.listen(app.get('port'), () => {
+  console.log(`Server on port ${app.get('port')}`);
+});

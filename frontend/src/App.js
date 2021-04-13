@@ -12,9 +12,6 @@ function App() {
     <div className="grid-container">
     <header className="row">
         <div>
-          <div>
-          <link rel="shortcut icon" href="/images/logo.ico" type="x-icon"></link>
-          </div>
             <Link className="brand" to="/">
               Super Tiernos
             </Link>
