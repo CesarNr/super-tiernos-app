@@ -60,6 +60,18 @@ const data = {
             numReviews:10,
             description:'Se diverte el y te ries tu',
         },
+        {
+            _id:'6',
+            name:'Suplementos Perros',
+            category:'Perros',
+            image: '/images/p3.jpg',
+            price:'120,000',
+            countInStore: 20,
+            brand: 'Super Tiernos',
+            rating:5,
+            numReviews:23,
+            description:'Se diverte el y te ries tu',
+        },
     ],
 };
 export default data;
