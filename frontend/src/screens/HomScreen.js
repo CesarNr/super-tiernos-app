@@ -27,6 +27,11 @@ export default function HomScreen(props) {
                 </ul>
 
             </div>
+            <img
+                src="images/logoSuperTiernos.png"
+                alt="logo"
+                className="img-brand"
+            ></img>
 
         </div>
     )

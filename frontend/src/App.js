@@ -16,7 +16,7 @@ function App() {
           <div className="brand-logo">
             <Link to="/">
               <img
-                src="images/picture1.png"
+                src="images/logoSuperTiernos.png"
                 alt="logo"
                 className="img-brand"
               ></img>
