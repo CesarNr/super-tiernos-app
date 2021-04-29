@@ -23,6 +23,7 @@ export default function ProductScreen(props) {
 
     return (
         <div>
+            <div>Página en mantenimiento</div>
             {loading ? (
             <LoadingBox></LoadingBox>
         ) : error ? (
