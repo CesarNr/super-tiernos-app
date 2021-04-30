@@ -29,7 +29,11 @@ export default function ProductScreen(props) {
              <MessageBox variant="danger">{error}</MessageBox>
          ) : (
              <div>
-                 <Link to="/catalog">Regresar</Link>
+                 <nav className="navigation">
+                     <ul>
+                         <Link to="/catalog">Regresar</Link>
+                     </ul>
+                 </nav>
                 <div className="row top">
                 <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
