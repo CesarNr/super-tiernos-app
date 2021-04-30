@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function SinginScreen(props) {
 
+    const [email, setEmail] = useState ('');
+    const [password, setPassword] = useState('');
+    const submitHandler = (e) => {
+        e.preventDefault();
+        // TODO: sigin action
+    }
     return (
-        <div>
-            <div className="card card-body">
-                <form className="form">
+        <div className="home">
+            <div className="home-title">
+                <form className="form" onSubmit={submitHandler}>
                     <div>
                         <h1>Iniciar Sesión</h1>
                     </div>
@@ -17,6 +23,7 @@ export default function SinginScreen(props) {
                             id="email"
                             placeholder="Ingresa tu correo"
                             required
+                            onChange={(e) => setEmail(e.target.value)}
                         ></input>
                     </div>
                     <div>
@@ -26,6 +33,7 @@ export default function SinginScreen(props) {
                             id="password"
                             placeholder="Ingresa tu contraseña"
                             required
+                            onChange={(e) => setPassword(e.target.value)}
                         ></input>
                     </div>
                     <label />

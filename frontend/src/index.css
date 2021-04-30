@@ -34,7 +34,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: #2999bb;
+    background-color: #063746;
     position: fixed;
     left: 0;
     top: 0;
@@ -62,7 +62,7 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: #e423de;
+    background-color: #7e0f7a;
     color: #ffffff;
     
 }
@@ -104,7 +104,7 @@ select,
 textarea,
 button {
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border: 0.1rem #a4a4a4 solid;
     font-size: 1.6rem;
     font-family: Helvetica, Arial, sans-serif;
@@ -122,10 +122,15 @@ select:hover,
 textarea:hover,
 button:hover {
     border: 0.1rem #404040 solid;
+    color: #000000;
+    background: #75d2f3;
+    border-radius: 15px;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
 }
 
 button.primary {
-    background-color: #f0c040;
+    background-color: #1aa4d6;
 }
 
 button.block {
@@ -436,4 +441,22 @@ img.large {
 .alert-danger {
     color: #a02020;
     background-color: #ffe0e0e0;
+}
+
+/* Form */
+
+.form {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.form label {
+    margin: 1rem 0;
+    display: block;
 }
