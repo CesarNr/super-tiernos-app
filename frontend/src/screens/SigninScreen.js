@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { signin } from '../actions/userActions';
 
 export default function SinginScreen(props) {
 
-    const [email, setEmail] = useState ('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const dispatch = useDispatch();
     const submitHandler = (e) => {
         e.preventDefault();
-        // TODO: sigin action
+        dispatch(signin(email, password))
     }
     return (
         <div className="home">
