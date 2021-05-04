@@ -15,7 +15,6 @@ export default function CatalogScreen() {
     }, [dispatch]);
     return (
         <div>
-            <div>Página en mantenimiento</div>
             {loading ? (
                 <LoadingBox></LoadingBox>
             ) : error ? (

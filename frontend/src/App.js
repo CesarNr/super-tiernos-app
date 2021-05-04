@@ -9,6 +9,9 @@ import SigninScreen from './screens/SigninScreen';
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -35,7 +38,11 @@ function App() {
                   <span className="badge">{cartItems.length}</span>
                 )}
               </Link>
-              <Link to="/Signin">Iniciar Sesion</Link>
+              {userInfo ? (
+                <Link to="#">{userInfo.name}</Link>
+              ) : (
+                <Link to="/Signin">Iniciar Sesion</Link>
+              )}
             </ul>
           </nav>
         </header>

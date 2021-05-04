@@ -16,7 +16,7 @@ userRouter.get(
 );
 
 userRouter.post(
-    '/singin',
+    '/signin',
     expressAsyncHandler(async (req, res) => {
         const user = await User.findOne({ email: req.body.email });
         if (user) {

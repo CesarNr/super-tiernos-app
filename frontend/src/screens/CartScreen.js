@@ -102,6 +102,11 @@ export default function CartScreen(props) {
                                 Continuar al checkout
                             </button>
                         </li>
+                        <li>
+                            <h3>
+                                Las compras online se encuentran temporalmente inhabilitadas, por favor oma una captura de pantalla y envianosla al 3123121485
+                            </h3>
+                        </li>
                     </ul>
                 </div>
             </div>

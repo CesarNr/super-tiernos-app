@@ -8,6 +8,10 @@ export default function SinginScreen(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const redirect = props.location.search
+    ? props.location.search.split('=')[1]
+    : '/';
+
     const dispatch = useDispatch();
     const submitHandler = (e) => {
         e.preventDefault();
