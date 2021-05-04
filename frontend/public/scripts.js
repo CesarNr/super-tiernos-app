@@ -13,4 +13,14 @@ jQuery('document').ready(function($){
         
     })
 
-});
+    menu.click(function() {
+
+        if( menu.hasClass('show') ) {
+            menu.removeClass('show');
+        } else {
+            menu.addClass('show');
+        }
+        
+    })
+
+}); 

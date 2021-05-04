@@ -45,7 +45,7 @@ header {
 
 main {
     grid-area: main;
-    padding-top: 2rem;
+    padding-top: 5rem;
 }
 
 .home {
@@ -56,8 +56,7 @@ main {
     min-height: 100vh;
     background-attachment: fixed;
     grid-area: main;
-    padding: 3rem;
-
+    padding-top: 1rem;
 }
 
 footer {
@@ -260,6 +259,7 @@ a.brand {
 
 .col-1 {
     flex: 1 1 25rem;
+    padding-left: 1rem;
 }
 
 .col-2 {
@@ -380,6 +380,11 @@ img.medium {
 img.large {
     width: 100%;
     max-width: 50rem;
+}
+
+img.img-menu {
+    max-width: 3rem;
+    width: 80%;
 }
 
 

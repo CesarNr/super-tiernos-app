@@ -28,7 +28,7 @@ function App() {
               Súper Tiernos
             </Link>
           </div>
-          <span className="menu-icon">Ver menú</span>
+          <span className="menu-icon"><img src="images/menu.png" className="img-menu" alt="menu"></img></span>
           <nav className="navigation">
             <ul>
               <Link to="/catalog">Tienda</Link>

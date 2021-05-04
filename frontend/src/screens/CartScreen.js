@@ -103,9 +103,12 @@ export default function CartScreen(props) {
                             </button>
                         </li>
                         <li>
-                            <h3>
-                                Las compras online se encuentran temporalmente inhabilitadas, por favor toma una captura de pantalla y enviala al 312-312-1485
-                            </h3>
+                            <h2>
+                            Las compras online no están disponibles en el momento.
+                            </h2>
+                            <h2>
+                            Por favor toma una captura de pantalla de los productos y envíala por WhatsApp al 312-312-1485
+                            </h2>
                         </li>
                     </ul>
                 </div>
