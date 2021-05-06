@@ -62,7 +62,7 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: #d92e8a;
+    background: linear-gradient(to right, rgba(1,167,189,0.6), rgba(217,46,138,0.6));
     color: #ffffff;
     box-shadow: 5px 0 0px 3px rgba(0, 0, 0, .2);
     
@@ -201,6 +201,8 @@ a.brand {
     .navigation {
         width: 100%;
         margin-top: 0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     .navigation ul{
