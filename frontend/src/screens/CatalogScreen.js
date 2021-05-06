@@ -14,7 +14,7 @@ export default function CatalogScreen() {
         dispatch(listProducts());
     }, [dispatch]);
     return (
-        <div>
+        <div className="home">
             {loading ? (
                 <LoadingBox></LoadingBox>
             ) : error ? (

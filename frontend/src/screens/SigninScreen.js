@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signin } from '../actions/userActions';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 export default function SinginScreen(props) {
 
@@ -12,11 +14,19 @@ export default function SinginScreen(props) {
     ? props.location.search.split('=')[1]
     : '/';
 
+    const userSignin = useSelector ((state) => state.userSignin);
+    const { userInfo, loading, error } = userSignin;
+
     const dispatch = useDispatch();
     const submitHandler = (e) => {
         e.preventDefault();
         dispatch(signin(email, password))
-    }
+    };
+    useEffect(() => {
+         if (userInfo) {
+             props.history.push(redirect);
+        }
+    }, [props.history, redirect, userInfo]);
     return (
         <div className="home">
             <div className="home-title">
@@ -24,6 +34,8 @@ export default function SinginScreen(props) {
                     <div>
                         <h1>Iniciar Sesión</h1>
                     </div>
+                    {loading && <LoadingBox></LoadingBox>}
+                    {error && <MessageBox variant="danger">{error}</MessageBox>}
                     <div>
                         <label htmlFor="email">Correo electronico</label>
                         <input

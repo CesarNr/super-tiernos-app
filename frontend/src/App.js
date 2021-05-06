@@ -1,16 +1,21 @@
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CartScreen from './screens/CartScreen';
 import CatalogScreen from './screens/CatalogScreen';
 import ProductScreen from './screens/ProductScreen';
 import HomScreen from './screens/HomScreen';
 import SigninScreen from './screens/SigninScreen';
+import { signout } from './actions/userActions';
 
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout());
+  }
 
   return (
     <BrowserRouter>
@@ -28,7 +33,7 @@ function App() {
               Súper Tiernos
             </Link>
           </div>
-          <span className="menu-icon"><img src="images/menu.png" className="img-menu" alt="menu"></img></span>
+          <span className="menu-icon"><i className="fas fa-ellipsis-v"></i></span>
           <nav className="navigation">
             <ul>
               <Link to="/catalog">Tienda</Link>
@@ -39,7 +44,16 @@ function App() {
                 )}
               </Link>
               {userInfo ? (
-                <Link to="#">{userInfo.name}</Link>
+                <div className="dropdown">
+                  <Link to="#">
+                    {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
+                  </Link>
+                  <ul className="dropdown-content">
+                    <Link to="#signout" onClick={signoutHandler}>
+                      Cerrar Sesión
+                    </Link>
+                  </ul>
+                </div>
               ) : (
                 <Link to="/Signin">Iniciar Sesion</Link>
               )}
