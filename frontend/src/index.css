@@ -201,8 +201,6 @@ a.brand {
     .navigation {
         width: 100%;
         margin-top: 0.5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
     }
 
     .navigation ul{
@@ -447,6 +445,10 @@ img.img-menu {
 
 
 /* Alert */
+
+.loading {
+    display: block !important;
+}
 
 .success {
     color: #20a020;

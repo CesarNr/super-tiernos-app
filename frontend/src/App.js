@@ -6,6 +6,7 @@ import ProductScreen from './screens/ProductScreen';
 import HomScreen from './screens/HomScreen';
 import SigninScreen from './screens/SigninScreen';
 import { signout } from './actions/userActions';
+import RegisterScreen from './screens/RegisterScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -57,6 +58,27 @@ function App() {
               ) : (
                 <Link to="/Signin">Iniciar Sesion</Link>
               )}
+              {userInfo && userInfo.isAdmin && (
+                <div className="dropdown">
+                  <Link to="#admin">
+                    Admin {' '}<i className="fa fa-caret-down"></i>
+                  </Link>
+                  <ul className="dropdown-content">
+                    <il>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </il>
+                    <il>
+                      <Link to="/productlist">Products</Link>
+                    </il>
+                    <il>
+                      <Link to="/orderlist">Orders</Link>
+                    </il>
+                    <il>
+                      <Link to="/userlist">Users</Link>
+                    </il>
+                  </ul>
+                </div>
+              )}
             </ul>
           </nav>
         </header>
@@ -66,6 +88,7 @@ function App() {
           <Route path="/Catalog" component={CatalogScreen} exact></Route>
           <Route path="/" component={HomScreen} exact></Route>
           <Route path="/Signin" component={SigninScreen} exact></Route>
+          <Route path="/register" component={RegisterScreen} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
       </div>
