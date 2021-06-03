@@ -34,12 +34,12 @@ export default function ProductListScreen(props) {
                 </thead>
                 <tbody>
                     {products.map((product) => (
-                        <tr key={product.id}>
+                        <tr key={product._id}>
                             <td>{product._id}</td>
-                            <td>{product._name}</td>
-                            <td>{product._price}</td>
-                            <td>{product._category}</td>
-                            <td>{product._brand}</td>
+                            <td>{product.name}</td>
+                            <td>{product.price}</td>
+                            <td>{product.category}</td>
+                            <td>{product.brand}</td>
                             <td>
                                 <button 
                                     type="button" 
