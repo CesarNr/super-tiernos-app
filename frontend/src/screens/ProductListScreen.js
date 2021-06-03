@@ -10,7 +10,10 @@ export default function ProductListScreen(props) {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(listProducts)
-    })
+    }, [dispatch])
+    const deleteHandler = () => {
+        /// TODO: dispatch delete action
+    };
     return (
         <div>
             <h1>Productos</h1>
@@ -18,7 +21,7 @@ export default function ProductListScreen(props) {
             :
             error? <MessageBox variant="danger">{ error }</MessageBox>
             :
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -38,9 +41,23 @@ export default function ProductListScreen(props) {
                             <td>{product._category}</td>
                             <td>{product._brand}</td>
                             <td>
-                                <button type="button" className="small"
-                                onClick={() => props.history.push(`/product/${product._id}/edit`)}>
+                                <button 
+                                    type="button" 
+                                    className="small"
+                                    onClick={() => 
+                                        props.history.push(`/product/${product._id}/edit`)
+                                    }
+                                >
                                     Editar
+                                </button>
+                                <button 
+                                    type="button" 
+                                    className="small"
+                                    onClick={() => 
+                                        deleteHandler(product)
+                                    }
+                                >
+                                    Eliminar
                                 </button>
                             </td>
                         </tr>
