@@ -33,4 +33,8 @@ productRouter.get(
     })
 );
 
+productRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async(req, res) =>{
+    
+}))
+
 export default productRouter;
