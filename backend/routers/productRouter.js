@@ -33,6 +33,7 @@ productRouter.get(
     })
 );
 
+/*
 productRouter.post(
     '/',
     isAuth,
@@ -51,6 +52,8 @@ productRouter.post(
         });
     })
 );
+
+*/
 
 ///productRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async(req, res) =>{
     
