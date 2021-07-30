@@ -21,8 +21,8 @@ export default function CatalogScreen() {
                  <MessageBox variant="danger">{error}</MessageBox>
              ) : (
                 <div className="row center">
-                    {products.sort((product, a, b) => ( a.createdAt > b.createdAt ?
-                        <Product key={product._id} product={product}></Product> : -1
+                    {products.slice(0).reverse().map.map((product) => (
+                        <Product key={product._id} product={product}></Product>
                     ))}
                 </div>
              )}
