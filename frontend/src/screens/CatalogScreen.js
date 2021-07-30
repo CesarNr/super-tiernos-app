@@ -21,7 +21,7 @@ export default function CatalogScreen() {
                  <MessageBox variant="danger">{error}</MessageBox>
              ) : (
                 <div className="row center">
-                    {products.slice(0).reverse().map.map((product) => (
+                    {products.slice(0).reverse().map((product) => (
                         <Product key={product._id} product={product}></Product>
                     ))}
                 </div>
