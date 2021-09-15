@@ -10,7 +10,8 @@ import {
     PRODUCT_LIST_SUCCESS,
     PRODUCT_UPDATE_REQUEST,
     PRODUCT_UPDATE_FAIL,
-    PRODUCT_UPDATE_SUCCESS
+    PRODUCT_UPDATE_SUCCESS,
+    PRODUCT_CREATE_SUCCESS
 } from "../constants/productConstants";
 
 export const listProducts = () => async (dispatch) => {
@@ -43,9 +44,9 @@ export const detailsProduct = (productId) => async (dispatch) => {
 };
 
 export const createProduct = () => async (dispatch, getState) => {
-    dispatch({TYPE: PRODUCT_CREATE_REQUEST});
+    dispatch({ type: PRODUCT_CREATE_REQUEST});
     const {
-        userSignin: {userInfo},
+        userSignin: { userInfo },
     } = getState();
     try {
         const { data } = await Axios.post(
@@ -56,7 +57,7 @@ export const createProduct = () => async (dispatch, getState) => {
             }
         );
         dispatch({
-            type: PRODUCT_DETAILS_SUCCESS,
+            type: PRODUCT_CREATE_SUCCESS,
             payload: data.product,
         });
     } catch(error) {
