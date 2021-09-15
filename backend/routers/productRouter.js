@@ -72,7 +72,7 @@ productRouter.put(
             product.brand = req.body.brand;
             product.countInStock = req.body.countInStock;
             product.description = req.body.description;
-            const updateProdct = await product.save();
+            const updatedProduct = await product.save();
             res.send({ message: 'Product Updated', product: updatedProduct });
         } else {
             res.status(404).send({ message: 'Product Not Found'});
