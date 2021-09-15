@@ -42,7 +42,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
     }
 };
 
-export const ceateProduct = () => async (dispatch, getState) => {
+export const createProduct = () => async (dispatch, getState) => {
     dispatch({TYPE: PRODUCT_CREATE_REQUEST});
     const {
         userSignin: {userInfo},
