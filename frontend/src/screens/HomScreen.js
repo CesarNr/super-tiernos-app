@@ -12,11 +12,7 @@ export default function HomScreen(props) {
             </div>
 
             <div className="redes-container">
-                <img
-                    src="images/jornada3.jpeg"
-                    alt="jornada"
-                    className="jornada"
-                ></img>
+
             </div>
 
             <p className="home-description">

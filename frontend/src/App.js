@@ -47,6 +47,7 @@ function App() {
                   <span className="badge">{cartItems.length}</span>
                 )}
               </Link>
+              <Link to="/adoption">Adopta</Link>
               {userInfo ? (
                 <div className="dropdown">
                   <Link to="#">
