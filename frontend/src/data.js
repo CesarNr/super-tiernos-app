@@ -1,4 +1,33 @@
 const data = {
+
+    candidates : [
+        {
+            _id: '1',
+            name: 'Lukas Skywalker',
+            category: 'Canino',
+            image: '/images/p1.jpeg',
+            age:'100 años',
+            sponsor:'Obi-Wan Kenobi',
+            sponsorNumber:'3003004444',
+            genre: 'Macho',
+            health: 'buena',
+            sterilized: 'Si',
+            description:'Un amigo de una galaxia muy muy lejana ha venido a rescatarte del malvado imperio galactico',
+        },
+        {
+            _id: '2',
+            name: 'Chewbacca',
+            category: 'Canino',
+            image: '/images/p2.jpeg',
+            age:'60 años',
+            sponsor:'Han Solo',
+            sponsorNumber:'3003004445',
+            genre: 'Macho',
+            health: 'buena',
+            sterilized: 'No',
+            description:'Un amigo parte de la rebelion quien conoce la ubicación de la base secreta',
+        }
+    ],
     products: [
         {
             _id:'1',

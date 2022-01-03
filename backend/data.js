@@ -2,19 +2,45 @@ import bcrypt from 'bcryptjs';
 
 const data = {
 
+    candidates : [
+        {
+            name: 'Lukas Skywalker',
+            category: 'Canino',
+            image: '/images/p1.jpeg',
+            age:'100',
+            sponsor:'Obi-Wan Kenobi',
+            sponsorNumber:'3003004444',
+            genre: 'Macho',
+            health: 'buena',
+            sterilized: 'Si',
+            description:'Un amigo de una galaxia muy muy lejana ha venido a rescatarte del malvado imperio galactico',
+        },
+        {
+            name: 'Chewbacca',
+            category: 'Canino',
+            image: '/images/p2.jpeg',
+            age:'60',
+            sponsor:'Han Solo',
+            sponsorNumber:'3003004445',
+            genre: 'Macho',
+            health: 'buena',
+            sterilized: 'No',
+            description:'Un amigo parte de la rebelion quien conoce la ubicación de la base secreta',
+        }
+    ],
     users: [
         {
             name:'Cesar',
-            email: 'cesarn@supertiernos.com',
+            email: 'cesar.inuncira@gmail.com',
             number: '3184217361',
-            password: bcrypt.hashSync('usertest', 8),
+            password: bcrypt.hashSync('SuperTiern0s2022', 8),
             isAdmin: true,
         },
         {
             name:'Alana',
-            email: 'alanac@supertiernos.com',
+            email: 'mapis_046@hotmail.com',
             number: '3123121485',
-            password: bcrypt.hashSync('usertest', 8),
+            password: bcrypt.hashSync('SuperTiern0s2022', 8),
             isAdmin: false,
         },
     ],

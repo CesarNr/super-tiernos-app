@@ -5,6 +5,8 @@ import path from 'path';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
+import candidateRouter from './routers/candidateRouter.js';
+
 
 dotenv.config();
 
@@ -21,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/supertiernosdb'
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+app.use('/api/candidates', candidateRouter);
 
 //app.get('/', (req, res) => {
 //  res.send('Server is ready');
@@ -64,6 +67,12 @@ app.listen(app.get('port'), () => {
 //  }
 //});
 
-//app.get('/api/products', (req, res) => {
-//  res.send(data.products);
-//});
+/*app.get('/api/products', (req, res) => {
+  res.send(data.products);
+}); */
+
+// Api para obtener candidatos desde data.json
+
+/* app.get('/api/candidates', (req, res) => {
+  res.send(data.candidates);
+}); */

@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import CartScreen from './screens/CartScreen';
 import CatalogScreen from './screens/CatalogScreen';
+import AdoptionScreen from './screens/AdoptionScreen';
 import ProductScreen from './screens/ProductScreen';
 import HomScreen from './screens/HomScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -10,6 +11,9 @@ import RegisterScreen from './screens/RegisterScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import AdminRoute from './components/AdminRoute';
 import ProductEditScreen from './screens/ProductEditScreen';
+import CandidateScreen from './screens/CandidateScreen';
+import CandidateListScreen from './screens/CandidateListScreen';
+import CandidateEditScreen from './screens/CandidateEditScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -75,6 +79,9 @@ function App() {
                       <Link to="/productlist">Products</Link>
                     </il>
                     <il>
+                      <Link to="/candidatelist">Candidates</Link>
+                    </il>
+                    <il>
                       <Link to="/orderlist">Orders</Link>
                     </il>
                     <il>
@@ -91,12 +98,19 @@ function App() {
           <Route path="/Product/:id" component={ProductScreen} exact></Route>
           <Route path="/Product/:id/edit" component={ProductEditScreen} exact></Route>
           <Route path="/Catalog" component={CatalogScreen} exact></Route>
+          <Route path="/Adoption" component={AdoptionScreen} exact></Route>
+          <Route path="/Candidate/:id" component={CandidateScreen} exact></Route>
+          <Route path="/Candidate/:id/edit" component={CandidateEditScreen} exact></Route>
           <Route path="/" component={HomScreen} exact></Route>
           <Route path="/Signin" component={SigninScreen} exact></Route>
           <Route path="/register" component={RegisterScreen} exact></Route>
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}
+          ></AdminRoute>
+          <AdminRoute
+            path="/candidatelist"
+            component={CandidateListScreen}
           ></AdminRoute>
         </main>
         <footer className="row center">All right reserved</footer>

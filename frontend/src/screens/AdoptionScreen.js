@@ -1,36 +1,44 @@
 import React, { useEffect } from 'react';
-import Product from '../components/Product';
-import MessageBox from '../components/MessageBox';
+import Candidate from '../components/Candidate';
 import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
-import { listProducts } from '../actions/productActions';
+import { listCandidates } from '../actions/candidateActions';
 
 export default function AdoptionScreen() {
     const dispatch = useDispatch();
-    const productList = useSelector( (state) => state.productList);
-    const { loading, error, products } = productList;
+    const candidateList = useSelector( (state) => state.candidateList);
+    const { loading, error, candidates } = candidateList;
 
     useEffect(() => {
-        dispatch(listProducts());
+        dispatch(listCandidates());
     }, [dispatch]);
     return (
         <div className="home">
             <div>
-                <title>
-                    Página en construcción
-                </title>
-            </div>
-            {loading ? (
-                <LoadingBox></LoadingBox>
-            ) : error ? (
-                 <MessageBox variant="danger">{error}</MessageBox>
-             ) : (
-                <div className="row center">
-                    {products.slice(0).reverse().map((product) => (
-                        <Product key={product._id} product={product}></Product>
-                    ))}
+                <h1>
+                    ¿Quieres Adoptar?
+                </h1>
+                <h2>
+                    Pronto encontraras acá la lista de peluditos.
+                </h2>
+
+                <div>
+                    {loading ? (
+                        <LoadingBox></LoadingBox>
+                    ) : error ? (
+                        <MessageBox variant="danger">{error}</MessageBox>
+                    ) : (
+                        <div className="row center">
+                        {candidates.map((candidate) => (
+                            <Candidate key={candidate._id} candidate={candidate}></Candidate>
+                        ))}
+                        </div>
+                    )}
                 </div>
-             )}
+
+            </div>
+            
         </div>
     );
 }
