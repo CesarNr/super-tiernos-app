@@ -11,10 +11,6 @@ export default function HomScreen(props) {
                 </h1>
             </div>
 
-            <div className="redes-container">
-
-            </div>
-
             <p className="home-description">
                 Encuentra aquí los productos de la mejor calidad para tu mascota
             </p>

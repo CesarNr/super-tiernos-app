@@ -49,15 +49,16 @@ main {
 }
 
 .home {
-    background-image: url(beagle-dog-gray-background.jpg);
+    background-image: url(backgroundtest1.jpg);
     background-size: cover;
-    background-position: center;
+    background-position-y: 30%;
+    background-position-x: center;
     background-repeat: no-repeat;
     min-height: 100vh;
     background-attachment: fixed;
     grid-area: main;
     padding-top: 1rem;
-    top:0;
+    top:3;
 }
 
 footer {
@@ -314,9 +315,9 @@ a.brand {
 .home-sub-des {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
-    padding-top: 20vh;
+    padding-top: 0vh;
     height: auto;
 }
 
@@ -324,7 +325,7 @@ a.brand {
     display: flex;
     height: auto;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .redes-container ul li {
