@@ -7,12 +7,12 @@ export default function HomScreen(props) {
 
             <div>
                 <h1 className="home-title">
-                    Bienvenido al nuevo Catalogo de Súper Tiernos
+                    Bienvenido al Catalogo de Súper Tiernos
                 </h1>
             </div>
 
             <p className="home-description">
-                Encuentra aquí los productos de la mejor calidad para tu mascota
+                Encuentra aquí los productos de la mejor calidad para tu peludito.
             </p>
 
             <p className="home-sub-des">
