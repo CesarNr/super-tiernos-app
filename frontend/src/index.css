@@ -271,6 +271,7 @@ a.brand {
 
 .row.center {
     justify-content: center;
+
 }
 
 .col-1 {
@@ -395,8 +396,10 @@ img.small {
 }
 
 img.medium {
-    max-width: 29rem;
     width: 100%;
+    min-width:27rem;
+    max-height: 27rem;
+    min-height: 27rem;
 }
 
 img.large {
@@ -425,6 +428,16 @@ img.jornada {
     border-radius: 0.5rem;
     margin: 1rem;
     opacity: 0.8;
+    max-height: 42rem;
+    min-height: 42rem;
+    max-width: 28rem;
+}
+
+.card-img{
+    min-width:27rem;
+    max-height: 27rem;
+    min-height: 27rem;
+    max-width: 29rem;
 }
 
 .card-body {
