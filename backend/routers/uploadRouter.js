@@ -1,9 +1,9 @@
 import multer from 'multer';
 import express from 'express';
 import { isAuth } from '../utils.js';
-import multerS3 from 'multer-s3';
-import aws from 'aws-sdk';
-import { config } from 'dotenv/types/index.js';
+//import multerS3 from 'multer-s3';
+//import aws from 'aws-sdk';
+//import { config } from 'dotenv/types/index.js';
 
 const uploadRouter = express.Router();
 
@@ -21,7 +21,7 @@ const upload = multer({storage});
 uploadRouter.post('/', isAuth, upload.single('image'), (req, res) => {
     res.send(`/${req.file.path}`);
 });
-
+/*
 aws.config.update({
     accessKeyId: config.accessKeyId,
     secretAccessKey: config.secretAccessKey,
@@ -40,5 +40,6 @@ const uploadS3 = multer({ storage: storageS3 });
 router.post('/s3', uploadS3.single('image'), (req, res) => {
     res.send(req.file.location);
 });
+*/
 
 export default uploadRouter;
